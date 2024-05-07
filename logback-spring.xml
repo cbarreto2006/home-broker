@@ -1,0 +1,55 @@
+<configuration scan="true" scanPeriod="50 seconds">
+
+	<property name="DEV_HOME" value="/opt/home-broker/logs" />
+	<include resource="org/springframework/boot/logging/logback/defaults.xml" />
+	<property name="CONSOLE_LOG_PATTERN"
+		value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}" />
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${DEV_HOME}/home-broker.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${DEV_HOME}/rolling/home-broker.%i.log.zip
+			</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>100</MaxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}}</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>${CONSOLE_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<springProfile name="default">
+		<logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" additivity="true">
+			<appender-ref ref="FILE" />
+		</logger>
+		<logger name="voud" level="DEBUG" additivity="true">
+			<appender-ref ref="FILE" />
+		</logger>
+		<root level="INFO">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="FILE" />
+		</root>
+	</springProfile>
+
+	<springProfile name="dev,hml,prd">
+		<logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" additivity="false">
+			<appender-ref ref="FILE" />
+		</logger>
+		<logger name="voud" level="DEBUG" additivity="false">
+			<appender-ref ref="FILE" />
+		</logger>
+		<root level="INFO">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="FILE" />
+		</root>
+	</springProfile>
+</configuration>

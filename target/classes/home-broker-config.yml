@@ -1,0 +1,27 @@
+logging:
+  config: logback-spring.xml
+
+server:
+  port: 9098
+  servlet:
+    context-path: /home-broker
+
+home-broker:
+  enviroment: prod
+  measure:
+    max-list: 1000
+    time-spread: seconds
+    average-measure-1: 60
+    average-measure-2: 120
+    average-measure-3: 150
+    average-measure-4: 300
+    average-measure-5: 600
+  trigger:
+    dollar-update:
+      job: 20000
+      url: https://dolarhoje.com/
+    stocks-update:
+      job: 600000
+      thread-qty: 10
+      list-stock: apn4dm,apn4dm,apnjsm,bpwu7w,c6jar7
+      url: https://www.msn.com/pt-br/dinheiro/stockdetails/fi-STOCK-ID?ocid=winp1taskbar&id=STOCK-ID

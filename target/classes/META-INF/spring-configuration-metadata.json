@@ -1,0 +1,72 @@
+{
+  "groups": [
+    {
+      "name": "com.gft.home.broker",
+      "type": "com.gft.home.broker.config.ComponentConfig",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.gft.home.broker.average-measure1",
+      "type": "java.math.BigDecimal",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.average-measure2",
+      "type": "java.math.BigDecimal",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.average-measure3",
+      "type": "java.math.BigDecimal",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.average-measure4",
+      "type": "java.math.BigDecimal",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.average-measure5",
+      "type": "java.math.BigDecimal",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.enviroment",
+      "type": "java.lang.String",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.max-list",
+      "type": "java.lang.Integer",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.stock-list",
+      "type": "java.lang.String",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.stocks-url",
+      "type": "java.lang.String",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.thread-qty",
+      "type": "java.lang.Integer",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.time-spread",
+      "type": "java.lang.String",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    },
+    {
+      "name": "com.gft.home.broker.url-dollar",
+      "type": "java.lang.String",
+      "sourceType": "com.gft.home.broker.config.ComponentConfig"
+    }
+  ],
+  "hints": []
+}
