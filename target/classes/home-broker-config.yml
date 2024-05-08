@@ -18,10 +18,10 @@ home-broker:
     average-measure-5: 600
   trigger:
     dollar-update:
-      job: 20000
+      job: 30000
       url: https://dolarhoje.com/
     stocks-update:
-      job: 600000
+      job: 30000
       thread-qty: 10
       list-stock: apn4dm,apn4dm,apnjsm,bpwu7w,c6jar7
       url: https://www.msn.com/pt-br/dinheiro/stockdetails/fi-STOCK-ID?ocid=winp1taskbar&id=STOCK-ID

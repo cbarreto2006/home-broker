@@ -18,6 +18,7 @@ public class Asset implements Serializable {
 		this.dateReference = dateReference;
 		this.assetValue=assetValue;
 	}
+
 	private static final long serialVersionUID = -6666163088582895219L;
 	LocalDateTime dateReference;
 	String assetId;

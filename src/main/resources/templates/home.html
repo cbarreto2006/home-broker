@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Asset List</title>
+</head>
+<body>
+    <h1>Asset List</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Asset Code</th>
+                <th>Asset ID</th>
+                <th>Asset Value</th>
+                <th>Reference Date</th>
+				<th>Avg 1 min</th>
+				<th>Avg 2 min</th>
+				<th>Avg 3 min</th>
+				<th>Avg 4 min</th>
+				<th>Avg 5 min</th>
+				
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="asset : ${listAssetsPanel}">
+                <td th:text="${asset.assetCode}"></td>
+                <td th:text="${asset.assetId}"></td>
+                <td th:text="${asset.assetValue}"></td>
+				<td th:text="${asset.dateReference}"></td>
+                <td th:text="${asset.averageValue1}"></td>
+				<td th:text="${asset.averageValue2}"></td>
+				<td th:text="${asset.averageValue3}"></td>
+				<td th:text="${asset.averageValue4}"></td>
+				<td th:text="${asset.averageValue5}"></td>
+				
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

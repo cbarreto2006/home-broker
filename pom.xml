@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.gft.home.broker</groupId>
 	<artifactId>home-broker</artifactId>
+	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>home-broker</name>
 	<description>Demo project for home-broker Spring Boot</description>
